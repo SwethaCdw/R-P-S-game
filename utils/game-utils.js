@@ -18,13 +18,13 @@ export const determineWinner = (player1Choice, player2Choice) => {
 /**
  * Determine if the player already has a majority win
  * @param {*} scores 
- * @param {*} MAJORITY_WIN_COUNT 
+ * @param {*} majorityWinCount 
  * @returns winner of the game
  */
-export const getMajorityChampion = (scores, MAJORITY_WIN_COUNT) => {
-    return scores.player1Score > MAJORITY_WIN_COUNT
+export const getMajorityChampion = (scores, majorityWinCount) => {
+    return scores.player1Score > majorityWinCount
         ? PLAYERS.PLAYER_ONE
-        : scores.player2Score > MAJORITY_WIN_COUNT
+        : scores.player2Score > majorityWinCount
         ? PLAYERS.PLAYER_TWO
         : DRAW_MATCH;
 }
